@@ -4038,3 +4038,16 @@ Processing by ListsController#index as HTML
 Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 5289)
 
 
+Started GET "/lists/new" for ::1 at 2023-02-12 14:55:11 +0100
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/_form.html.erb (Duration: 9.6ms | Allocations: 3043)
+  Rendered lists/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 3322)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_nav.html.erb:15
+  Rendered layouts/_nav.html.erb (Duration: 2.1ms | Allocations: 1250)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 7233)
+Completed 200 OK in 32ms (Views: 21.3ms | ActiveRecord: 3.1ms | Allocations: 8861)
+
+
