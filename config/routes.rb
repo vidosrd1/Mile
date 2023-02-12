@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :pins
-  resources :articles
   resources :posts
+  resources :articles
+  resources :pins
   devise_for :users
   get 'home/index'
   resources :lists

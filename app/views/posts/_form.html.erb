@@ -12,6 +12,11 @@
   <% end %>
 
   <div>
+    <%= form.label :uset_id, style: "display: block" %>
+    <%= form.text_field :uset_id %>
+  </div>
+
+  <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
   </div>
@@ -24,11 +29,6 @@
   <div>
     <%= form.label :body, style: "display: block" %>
     <%= form.rich_text_area :body %>
-  </div>
-
-  <div>
-    <%= form.label :publish, style: "display: block" %>
-    <%= form.date_field :publish %>
   </div>
 
   <div>
