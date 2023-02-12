@@ -20,8 +20,13 @@
    <tbody>
      <% @pins.each do |pin| %>
        <tr style="padding:10px 20px 25px 0">
-         <td><%= link_to image_tag(pin.image, style:"width:60px; heigh:auto"), pin.image %></td> 
-         <td style="width:60px; heigh:auto"></td>
+         <td>
+           <% if pin.image.attached? %>
+             <%= link_to image_tag(pin.image,
+             style:"width:60px; heigh:auto"), pin.image %>
+           <% end %>
+         </td>
+         <td style="width:30px; heigh:auto"></td>
          <td><%= pin.title %></td>
          <td style="width:30px; heigh:auto"></td>
          <td style="padding-top:10px; padding-right:0px; padding-bottom:20px; padding-left:0"><%= truncate(strip_tags(pin.body.to_s), length: 80) %></td>          <td style="width:30px; heigh:auto"></td>
